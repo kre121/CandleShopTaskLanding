@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lobster', cursive;
+    line-height: 2;
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.452)) , url('../img/candlesmultiple1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text-box h1 {
+    text-transform: uppercase;
+    color: rgb(241, 233, 222);
+}
+.text-right {
+    margin-top: 32px;
+    position: relative;
+    text-align: center;
+    animation: textRigh;
+    animation-duration: 3s;
+}
+@keyframes textRight {
+    0% {right: -1000px;}
+    85% {right: 50px;}
+    100% {right: 0;}
+}
+.text-left {
+    position: relative;
+    animation: textLeft;
+    animation-duration: 3s;
+    text-align: center;
+}
+@keyframes textLeft {
+    0% {left: -1000px;
+    opacity: 0;}
+    85% {left: 50px;}
+    100% {left: 0;}
+}
+.heading-main {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1.1rem;
+    text-shadow: 0 0 3px #0c0707, 0 0 5px #6e6d5d
+}
+.heading-sub {
+    display: block;
+    letter-spacing: 1,3rem;
+    font-size: 2rem;
+    animation-name: moveinRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    text-shadow: 0 0 3px #0c0707, 0 0 5px #6e6d5d
+}
+@keyframes moveinRight {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+.btn-container {
+    text-align: center;
+}
+.btn {
+    border-bottom: 0.2rem solid rgb(171, 124, 124);
+    color: aliceblue;
+    display: inline-block;
+    font-size: 3rem;
+    margin-top: 5rem;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background-color: #8a6b7d9d;
+    box-shadow: 0 1rem 2rem rgba(18, 16, 13, 0.452);
+    transform: translateY(-5px);
+}
+.btn:active {
+    box-shadow: 0 0.5rem 1rem rgba(18, 16, 13, 0.452);
+    transform: translateY(5px);
+}
+.main {
+    background-color: bisque;
+    height: 95vh;
+    margin-top: -5rem;
+    text-align: center;
+    padding-top: 5rem;
+    clip-path: polygon(50% 13%, 100% 0, 100% 35%, 100% 57%, 88% 90%, 50% 100%, 11% 87%, 0 57%, 0% 35%, 0 0);
+}
+.main h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(241, 234, 225);
+    text-shadow: 0 0 3px #6e6d5d, 0 0 5px #eae2e2;
+}
+.gallery {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.gallery_photo {
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.452);
+    width: 500px;
+    position: absolute;
+    outline-offset: 1rem;
+    transition: all 0.3s;
+    z-index: 10;
+}
+.gallery_photo:hover {
+    outline: 1.8rem solid rgba(169, 146, 146, 0.443);
+    transform: scale(1.1);
+    z-index: 30;
+}
+.gallery_photo-1 {
+    width: 200px;
+    left: 25%;
+    top: 2%;
+}
+.gallery_photo-2 {
+    width: 350px;
+    top: 15%;
+    left: 60%;
+}
+.gallery_photo-3 {
+    width: 200px;
+    top: 5%;
+    left: 45%;
+}
+.footer {
+    color: rgba(169, 146, 146, 0.443);
+    font-size: 2rem;
+    height: 25vh;
+    text-align: center;
+    padding: 2rem;
+}
+.footer ul li {
+    display: inline-block;
+    margin: 1rem;
+
+}
+footer ul li a {
+    text-decoration: none;
+    color: #6e6d5d;
+}
+.footer ul li:hover, .footer ul li a:hover{
+    color: #6e6d5d;
+    transform: scale(1.2);
+}
